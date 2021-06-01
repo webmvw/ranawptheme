@@ -1,5 +1,21 @@
 <?php
 
+function rana_theme_setup(){
+	add_theme_support('title-tag');
+	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
+
+	register_nav_menus(array(
+		'main-menu' => __('Primary Menu', 'rana')
+	));
+
+}
+add_action('after_setup_theme', 'rana_theme_setup');
+
+
+
+
+
+
 function rana_theme_css_js_enqueue(){
 
 	// load css

@@ -4,8 +4,6 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Title -->
-      <title>Halim | Onepage Multipurpose Website</title>
 
       <?php wp_head(); ?>
 
@@ -38,20 +36,17 @@
             <div class="row">
                <div class="col-xl-12">
                   <nav class="navbar navbar-expand-md navbar-light">
-                     <a class="navbar-brand" href="#">halim</a>
+                     <a class="navbar-brand" href="#">rana-theme</a>
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
                      </button>
                      <div class="collapse navbar-collapse ml-auto mainmenu" id="navbarNav">
-                        <ul class="navbar-nav ml-auto">
-                           <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About</a></li>
-                           <li><a href="services.html">Services</a></li>
-                           <li><a href="portfolio.html">Portfolio</a></li>
-                           <li><a href="gallery.html">Gallery</a></li>
-                           <li><a href="blog.html">Blog</a></li>
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                        <?php
+                        wp_nav_menu(array(
+                           'theme_location' => 'main-menu',
+                           'menu_class' => 'navbar-nav ml-auto'
+                        ));
+                        ?>
                      </div>
                   </nav>
                </div>
