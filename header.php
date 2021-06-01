@@ -6,20 +6,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Title -->
       <title>Halim | Onepage Multipurpose Website</title>
-      <!-- Font Google -->
-      <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-      <!-- Bootstrap Css -->
-      <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-      <!-- Font Awesome Css -->
-      <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-      <!-- Magnific Popup Css -->
-      <link href="assets/css/magnific-popup.css" rel="stylesheet">
-      <!-- Owl Carousel Css -->
-      <link href="assets/css/owl.carousel.css" rel="stylesheet">
-      <!-- Main Css -->
-      <link href="assets/css/style.css" rel="stylesheet">
-      <!-- Responsive Css -->
-      <link href="assets/css/responsive.css" rel="stylesheet">
 
       <?php wp_head(); ?>
 
