@@ -2,6 +2,7 @@
 
 function rana_theme_setup(){
 	add_theme_support('title-tag');
+	add_theme_support('post-thumbnails', array('sliders'));
 	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
 
 	register_nav_menus(array(
@@ -41,5 +42,22 @@ function rana_theme_css_js_enqueue(){
 	wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', true);
 }
 add_action('wp_enqueue_scripts', 'rana_theme_css_js_enqueue');
+
+
+
+// all custom posts
+function rana_theme_custom_posts(){
+	//custom post for slider
+	register_post_type('sliders', array(
+		'labels' => array(
+			'name' => __('Sliders', 'rana'),
+			'singular_name' => __('Slider', 'rana')
+		),
+		'public' => true,
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+	));
+}
+add_action('init', 'rana_theme_custom_posts');
+
 
 ?>
