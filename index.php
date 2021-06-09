@@ -12,9 +12,10 @@
             $query =  new WP_Query($args);
             while($query->have_posts()){
                $query->the_post();
-               $sub_heading = get_post_meta(get_the_ID(), 'sub_heading', true);
-               $btn_text = get_post_meta(get_the_ID(), 'btn_text', true);
-               $btn_link = get_post_meta(get_the_ID(), 'btn_link', true);
+               // $sub_heading = get_post_meta(get_the_ID(), 'sub_heading', true);
+               $sub_heading = get_field('sub_heading');
+               $btn_text = get_field('btn_text');
+               $btn_link = get_field('btn_link');
             ?>
             <div class="single-slide" style="background:url('<?php the_post_thumbnail_url(); ?>')">
                <div class="container">
