@@ -2,7 +2,7 @@
 
 function rana_theme_setup(){
 	add_theme_support('title-tag');
-	add_theme_support('post-thumbnails', array('sliders'));
+	add_theme_support('post-thumbnails', array('sliders', 'teams'));
 	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
 
 	register_nav_menus(array(
@@ -66,6 +66,17 @@ function rana_theme_custom_posts(){
 		),
 		'public' => true,
 		'supports' => array('title', 'editor', 'custom-fields')
+	));
+
+
+	// custom post for teams
+	register_post_type('teams', array(
+		'labels' => array(
+			'name' => __('Teams', 'rana'),
+			'singular_name' => __('Team', 'rana')
+		),
+		'public' => true,
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes')
 	));
 
 }
