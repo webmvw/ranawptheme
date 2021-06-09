@@ -47,6 +47,7 @@ add_action('wp_enqueue_scripts', 'rana_theme_css_js_enqueue');
 
 // all custom posts
 function rana_theme_custom_posts(){
+
 	//custom post for slider
 	register_post_type('sliders', array(
 		'labels' => array(
@@ -56,6 +57,17 @@ function rana_theme_custom_posts(){
 		'public' => true,
 		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
 	));
+
+	//custom post for services
+	register_post_type('services', array(
+		'labels' => array(
+			'name' => __('Services', 'rana'),
+			'singular_name' => __('Service', 'rana')
+		),
+		'public' => true,
+		'supports' => array('title', 'editor', 'custom-fields')
+	));
+
 }
 add_action('init', 'rana_theme_custom_posts');
 
