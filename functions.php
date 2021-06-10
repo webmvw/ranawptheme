@@ -2,7 +2,7 @@
 
 function rana_theme_setup(){
 	add_theme_support('title-tag');
-	add_theme_support('post-thumbnails', array('sliders', 'teams', 'testimonials'));
+	add_theme_support('post-thumbnails', array('post', 'sliders', 'teams', 'testimonials'));
 	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
 
 	register_nav_menus(array(
