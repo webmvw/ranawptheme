@@ -20,19 +20,12 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-8">
-                <h2>Blog Title</h2>
-                <img src="assets/img/blog/blog1.jpg" alt="">
-                <p>Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis.Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis.Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis.Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis.Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis.</p>
-                <div class="comments">
-                    <h4>leave a reply</h4>
-                    <form action="">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Email">
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Message"></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
+                <?php
+                while(have_posts()){
+                  the_post();
+                  get_template_part('template-parts/content');
+                }
+                ?>
             </div>
             <div class="col-xl-4">
                 <div class="single-sidebar">
