@@ -36,7 +36,7 @@
             <div class="row">
                <div class="col-xl-12">
                   <nav class="navbar navbar-expand-md navbar-light">
-                     <a class="navbar-brand" href="#">rana-theme</a>
+                     <a class="navbar-brand" href="<?php echo site_url(); ?>">rana-theme</a>
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
                      </button>

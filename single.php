@@ -4,13 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="breadcumb">
-                    <h4>Single Blog</h4>
-                    <ul>
-                        <li><a href=""></a>Home</li> / 
-                        <li>Single Blog</li>
-                    </ul>
-                </div>
+                <?php get_template_part('template-parts/breadcumb'); ?>
             </div>
         </div>
     </div>
