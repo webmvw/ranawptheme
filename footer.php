@@ -4,46 +4,16 @@
    <div class="container">
       <div class="row">
          <div class="col-lg-3 col-md-6">
-            <div class="single-footer footer-logo">
-               <h3>halim</h3>
-               <p>Lorem ipsum dolor adipisicing amet, consectetur sit elit. Aspernatur incidihil quo officia.</p>
-            </div>
+            <?php dynamic_sidebar('footer_sidebar1'); ?>
          </div>
          <div class="col-lg-2 col-md-6">
-            <div class="single-footer">
-               <h4>quick links</h4>
-               <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Services</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Contact Us</a></li>
-               </ul>
-            </div>
+            <?php dynamic_sidebar('footer_sidebar2'); ?>
          </div>
          <div class="col-lg-4 col-md-6">
-            <div class="single-footer">
-               <h4>latest post</h4>
-               <ul>
-                  <li><a href="#">lorem ipsum dummy text</a></li>
-                  <li><a href="#">lorem ipsum dummy text</a></li>
-                  <li><a href="#">lorem ipsum dummy text</a></li>
-                  <li><a href="#">lorem ipsum dummy text</a></li>
-                  <li><a href="#">lorem ipsum dummy text</a></li>
-               </ul>
-            </div>
+            <?php dynamic_sidebar('footer_sidebar3'); ?>
          </div>
          <div class="col-lg-3 col-md-6">
-            <div class="single-footer contact-box">
-               <h4>Contact Us</h4>
-               <ul>
-                  <li><i class="fa fa-map-marker"></i> 245 Street, Sydney, Australia</li>
-                  <li><i class="fa fa-mobile"></i>  +23 0034 5567 341</li>
-                  <li><i class="fa fa-phone"></i>  +23 0034 5567 341</li>
-                  <li><i class="fa fa-envelope"></i>  info@demo.com</li>
-                  <li><i class="fa fa-globe"></i>  www.demo.com</li>
-               </ul>
-            </div>
+            <?php dynamic_sidebar('footer_sidebar4'); ?>
          </div>
       </div>
       <div class="row copyright">

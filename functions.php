@@ -106,6 +106,50 @@ function rana_theme_widgets(){
 		'before_title' => '<h4>',
 		'after_title' => '</h4>'
 	));
+
+	//footer widget 1
+	register_sidebar(array(
+		'name' => __('Footer Sidebar 1', 'rana'),
+		'id' => 'footer_sidebar1',
+		'description' => __('Footer widget 1 for showing widget', 'rana'),
+		'before_widget' => '<div class="single-sidebarsingle-footer footer-logo">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
+	));
+
+	//footer widget 2
+	register_sidebar(array(
+		'name' => __('Footer Sidebar 2', 'rana'),
+		'id' => 'footer_sidebar2',
+		'description' => __('Footer widget 2 for showing widget', 'rana'),
+		'before_widget' => '<div class="single-footer">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	//footer widget 3
+	register_sidebar(array(
+		'name' => __('Footer Sidebar 3', 'rana'),
+		'id' => 'footer_sidebar3',
+		'description' => __('Footer widget 3 for showing widget', 'rana'),
+		'before_widget' => '<div class="single-footer">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	//footer widget 3
+	register_sidebar(array(
+		'name' => __('Footer Sidebar 4', 'rana'),
+		'id' => 'footer_sidebar4',
+		'description' => __('Footer widget 4 for showing widget', 'rana'),
+		'before_widget' => '<div class="single-footer contact-box">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
 }
 add_action('widgets_init', 'rana_theme_widgets');
 
