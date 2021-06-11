@@ -93,4 +93,23 @@ function rana_theme_custom_posts(){
 add_action('init', 'rana_theme_custom_posts');
 
 
+
+// widgets
+function rana_theme_widgets(){
+	//sidebar
+	register_sidebar(array(
+		'name' => __('Main Sidebar', 'rana'),
+		'id' => 'main_sidebar',
+		'description' => __('Main Sidebar for Blog page', 'rana'),
+		'before_widget' => '<div class="single-sidebar">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+}
+add_action('widgets_init', 'rana_theme_widgets');
+
+
+
+
 ?>
