@@ -89,6 +89,15 @@ function rana_theme_custom_posts(){
 		'supports' => array('thumbnail', 'custom-fields', 'page-attributes')
 	));
 
+	// custom post for gallery
+	register_post_type('gallery', array(
+		'labels' => array(
+			'name' => __('Gallerys', 'rana'),
+			'singular_name' => __('Gallery', 'rana')
+		),
+		'public' => true,
+		'supports' => array('title', 'custom-fields', 'page-attributes')
+	));
 }
 add_action('init', 'rana_theme_custom_posts');
 

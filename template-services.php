@@ -20,54 +20,28 @@ get_header();
 <section class="services-area pt-100 pb-50" id="services">
    <div class="container">
       <div class="row">
+         <?php
+         $args = array(
+            'post_type' => 'services',
+            'posts_per_page' => -1
+         );
+         $query =  new WP_Query($args);
+         while($query->have_posts()){
+            $query->the_post();
+            $service_icon = get_field('service_icon');
+         ?>
          <div class="col-lg-4 col-md-6">
             <!-- Single Service -->
             <div class="single-service">
-               <i class="fa fa-laptop"></i>
-               <h4>Web Design </h4>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
+               <i class="<?php echo $service_icon; ?>"></i>
+               <h4><?php the_title(); ?></h4>
+               <p><?php the_content(); ?></p>
             </div>
          </div>
-         <div class="col-lg-4 col-md-6">
-            <!-- Single Service -->
-            <div class="single-service">
-               <i class="fa fa-gears"></i>
-               <h4>Web Development</h4>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-            </div>
-         </div>
-         <div class="col-lg-4 col-md-6">
-            <!-- Single Service -->
-            <div class="single-service">
-               <i class="fa fa-mobile"></i>
-               <h4>Responsive Design</h4>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-            </div>
-         </div>
-         <div class="col-lg-4 col-md-6">
-            <!-- Single Service -->
-            <div class="single-service">
-               <i class="fa fa-magic"></i>
-               <h4>Graphic Design</h4>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-            </div>
-         </div>
-         <div class="col-lg-4 col-md-6">
-            <!-- Single Service -->
-            <div class="single-service">
-               <i class="fa fa-pencil"></i>
-               <h4>Creative Design</h4>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-            </div>
-         </div>
-         <div class="col-lg-4 col-md-6">
-            <!-- Single Service -->
-            <div class="single-service">
-               <i class="fa fa-fa fa-lightbulb-o"></i>
-               <h4>Branding</h4>
-               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-            </div>
-         </div>
+         <?php   
+         }
+         wp_reset_postdata();
+         ?>
       </div>
    </div>
 </section>
