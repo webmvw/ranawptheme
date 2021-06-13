@@ -9,10 +9,10 @@
         <div class="row">
             <div class="col-xl-12">
                <div class="breadcumb">
-                   <h4>Blog</h4>
+                   <h4><?php the_archive_title(); ?></h4>
                    <ul>
                        <li><a href="<?php echo site_url(); ?>">Home</a></li> / 
-                       <li>Blog</li>
+                       <li><?php the_archive_title(); ?></li>
                    </ul>
                </div>
             </div>
@@ -25,13 +25,8 @@
       <div class="row">
 
          <?php
-         $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 10
-         );
-         $query =  new WP_Query($args);
-         while($query->have_posts()){
-            $query->the_post();
+         while(have_posts()){
+            the_post();
          ?>
          <div class="col-md-4">
             <div class="single-blog">
@@ -56,13 +51,6 @@
          }
          wp_reset_postdata();
          ?>
-      </div>
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="pagination">
-            <?php posts_nav_link(' - ', ('&laquo; Previous Post'), ('Next Posts &raquo;')); ?>
-          </div>
-        </div>
       </div>
    </div>
 </section>
