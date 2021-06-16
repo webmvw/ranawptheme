@@ -7,3 +7,28 @@ description: rana multipurpose wordpress responsive theme.
 tags: Business, Corporate, Responsive, Blog, Portfolio, one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns;
 
 */
+
+
+/* pagination css */
+nav.navigation.pagination h2 {
+    display: none;
+}
+
+nav.navigation.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+a.page-numbers {
+    color: #222;
+    padding: 5px;
+    border: 1px solid #17a2b8;
+}
+a.prev {
+    background: #17a2b8;
+    color: #fff;
+}
+a.next {
+    background: #17a2b8;
+    color: #fff;
+}    
