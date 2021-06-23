@@ -32,3 +32,26 @@ a.next {
     background: #17a2b8;
     color: #fff;
 }    
+
+
+/* search form */
+form#searchform label {
+    display: none;
+}
+
+form#searchform input {
+    position: relative;
+    width: 84%;
+    min-height: 30px;
+}
+
+form#searchform input[type='submit'] {
+    position: absolute;
+    right: 0;
+    width: auto;
+    padding: 4px 16px;
+    display: inline-block;
+    border: none;
+    font-size: 12px;
+    cursor:pointer;
+}

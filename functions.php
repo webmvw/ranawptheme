@@ -2,7 +2,7 @@
 
 function rana_theme_setup(){
 	add_theme_support('title-tag');
-	add_theme_support('post-thumbnails', array('post', 'sliders', 'teams', 'testimonials'));
+	add_theme_support('post-thumbnails', array('post', 'sliders', 'teams', 'testimonials', 'portfolio'));
 	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
 
 	register_nav_menus(array(
@@ -97,6 +97,26 @@ function rana_theme_custom_posts(){
 		),
 		'public' => true,
 		'supports' => array('title', 'custom-fields', 'page-attributes')
+	));
+
+	// custom post for portfolio
+	register_post_type('portfolio', array(
+		'labels' => array(
+			'name' => __('Portfolios', 'rana'),
+			'singular_name' => __('Portfolio', 'rana')
+		),
+		'public' => true,
+		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+	));
+
+	// custom taxonomy for portfolio
+	register_taxonomy('portfolio_cat', 'portfolio', array(
+		'labels' => array(
+			'name' => __('Categories', 'rana'),
+			'singular_name' => __('Category', 'rana')
+		),
+		'hierarchical' => true,
+		'show_admin_column' => true
 	));
 }
 add_action('init', 'rana_theme_custom_posts');
