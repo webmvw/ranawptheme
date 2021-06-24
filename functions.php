@@ -1,5 +1,8 @@
 <?php
 
+get_template_part('/template-parts/rana-options');
+
+
 function rana_theme_setup(){
 	add_theme_support('title-tag');
 	add_theme_support('post-thumbnails', array('post', 'sliders', 'teams', 'testimonials', 'portfolio'));
@@ -22,7 +25,7 @@ function rana_theme_css_js_enqueue(){
 	// load css
 	wp_enqueue_style('Poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 	wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(), '1.0', 'all');
-	wp_enqueue_style('font-awesome', get_template_directory_uri().'/assets/css/font-awesome.min.css', array(), '1.0', 'all');
+	wp_enqueue_style( 'fa5', 'https://use.fontawesome.com/releases/v5.13.0/css/all.css', array(), '5.13.0', 'all' );
 	wp_enqueue_style('magnific-popup-css', get_template_directory_uri().'/assets/css/magnific-popup.css', array(), '1.0', 'all');
 	wp_enqueue_style('owl.carousel-css', get_template_directory_uri().'/assets/css/owl.carousel.css', array(), '1.0', 'all');
 	wp_enqueue_style('main-css', get_template_directory_uri().'/assets/css/style.css', array(), '1.0', 'all');
