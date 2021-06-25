@@ -19,7 +19,7 @@
       <div class="row copyright">
          <?php $config = get_option('rana_options');?>
          <div class="col-md-6">
-            <p>&copy; <?php echo $config['footer_text']; ?></p>
+            <p>&copy; <?php echo esc_html($config['footer_text']); ?></p>
          </div>
          <div class="col-md-6 text-right">
             <ul>
@@ -28,7 +28,7 @@
                if($footer_social_links){
                   foreach ($footer_social_links as $footer_social_link) {
                ?>
-               <li><a href="<?php echo $footer_social_link['footer_social_link']; ?>" title="<?php echo $footer_social_link['footer_social_title']; ?>" target="<?php echo $config['footer_link_target']; ?>"><i class="<?php echo $footer_social_link['footer_social_icon']; ?>"></i></a></li>
+               <li><a href="<?php echo esc_url($footer_social_link['footer_social_link']); ?>" title="<?php echo esc_attr($footer_social_link['footer_social_title']); ?>" target="<?php echo esc_attr($config['footer_link_target']); ?>"><i class="<?php echo esc_attr($footer_social_link['footer_social_icon']); ?>"></i></a></li>
                <?php       
                   }
                }

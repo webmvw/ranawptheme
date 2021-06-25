@@ -24,29 +24,24 @@
                <div class="col-md-7">
                   <div class="about">
                      <div class="page-title">
-                        <h4>welcome to halim</h4>
+                      <?php $config = get_option('rana_options'); ?>
+                        <h4><?php echo esc_html($config['about_page_title']); ?></h4>
                      </div>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio maxime laborum delectus aliquam ipsum itaque voluptatem non reiciendis aliquid totam facere, tempora iure iusto adipisci doloremque in, amet, alias nostrum. Explicabo reprehenderit.</p>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
+                     <p><?php echo esc_html($config['about_page_description']); ?></p>
                   </div>
                </div>
                <div class="col-md-5">
+                  <?php
+                  $about_page_features = $config['about_page_features'];
+                  if($about_page_features){
+                  foreach ($about_page_features as $about_page_feature) {
+                  ?>
                   <div class="single_about">
-                     <i class="fa fa-laptop"></i>
-                     <h4>our mission</h4>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
+                     <i class="<?php echo esc_attr($about_page_feature['features_icon']); ?>"></i>
+                     <h4><?php echo esc_html($about_page_feature['features_title']); ?></h4>
+                     <p><?php echo esc_html($about_page_feature['features_description']); ?></p>
                   </div>
-                  <div class="single_about">
-                     <i class="fa fa-user"></i>
-                     <h4>our vission</h4>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                  </div>
-                  <div class="single_about">
-                     <i class="fa fa-pencil"></i>
-                     <h4>our history</h4>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                  </div>
+                  <?php } } ?>
                </div>
             </div>
          </div>

@@ -32,12 +32,12 @@
                 $technology_lists = get_field('technology_used');
                 if($technology_lists){
                 ?>
-                <h4>Technology Used</h4>
+                <h4><?php esc_html_e('Technology Used', 'rana'); ?></h4>
                 <ul>
                   <?php
                   foreach($technology_lists as $technology_list){
                   ?>
-                  <li><i class="fa fa-arrow-right"></i> <?php echo $technology_list; ?></li>
+                  <li><i class="fa fa-arrow-right"></i> <?php echo esc_html($technology_list); ?></li>
                   <?php } ?>
                 </ul>
                 <?php 
@@ -49,12 +49,12 @@
                 $project_featureds = get_field('project_featured');
                 if($project_featureds){
                 ?>
-                <h4>Project Featured</h4>
+                <h4><?php esc_html_e('Project Featured', 'rana'); ?></h4>
                 <ul>
                   <?php
                   foreach($project_featureds as $project_featured){
                   ?>
-                  <li><i class="fa fa-arrow-right"></i> <?php echo $project_featured; ?></li>
+                  <li><i class="fa fa-arrow-right"></i> <?php echo esc_html($project_featured); ?></li>
                   <?php } ?>
                 </ul>
                 <?php 

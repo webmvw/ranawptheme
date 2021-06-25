@@ -33,10 +33,10 @@ get_header();
            ?>
            <div class="col-xl-4">
                 <div class="single-gallery">
-                     <img src="<?php echo $small_image['url']; ?>" alt="<?php the_title(); ?>">
+                     <img src="<?php echo esc_url($small_image['url']); ?>" alt="<?php the_title(); ?>">
                      <div class="gallery-hover">
                         <div class="gallery-content">
-                           <h3><a href="<?php echo $large_image['url']; ?>" class="gallery"><i class="fa fa-plus"></i> <?php the_title(); ?></a></h3>
+                           <h3><a href="<?php echo esc_url($large_image['url']); ?>" class="gallery"><i class="fa fa-plus"></i> <?php the_title(); ?></a></h3>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@
                <div class="breadcumb">
                    <h4><?php the_archive_title(); ?></h4>
                    <ul>
-                       <li><a href="<?php echo site_url(); ?>">Home</a></li> / 
+                       <li><a href="<?php echo esc_url(site_url()); ?>"><?php esc_html_e('Home', 'rana'); ?></a></li> / 
                        <li><?php the_archive_title(); ?></li>
                    </ul>
                </div>
@@ -43,7 +43,7 @@
                      </ul>
                   </div>
                   <p><?php the_excerpt(); ?></p>
-                  <a href="<?php the_permalink(); ?>" class="box-btn">read more <i class="fa fa-angle-double-right"></i></a>
+                  <a href="<?php the_permalink(); ?>" class="box-btn"><?php esc_html_e('read more', 'rana'); ?> <i class="fa fa-angle-double-right"></i></a>
                </div>
             </div>
          </div>

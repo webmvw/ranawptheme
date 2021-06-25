@@ -9,10 +9,10 @@
         <div class="row">
             <div class="col-xl-12">
                <div class="breadcumb">
-                   <h4>Blog</h4>
+                   <h4><?php esc_html_e('Blog', 'rana'); ?></h4>
                    <ul>
-                       <li><a href="<?php echo site_url(); ?>">Home</a></li> / 
-                       <li>Blog</li>
+                       <li><a href="<?php echo esc_url(site_url()); ?>"><?php esc_html_e('Home', 'rana'); ?></a></li> / 
+                       <li><?php esc_html_e('Blog', 'rana'); ?></li>
                    </ul>
                </div>
             </div>
@@ -43,7 +43,7 @@
                      </ul>
                   </div>
                   <p><?php the_excerpt(); ?></p>
-                  <a href="<?php the_permalink(); ?>" class="box-btn">read more <i class="fa fa-angle-double-right"></i></a>
+                  <a href="<?php the_permalink(); ?>" class="box-btn"><?php esc_html_e('read more', 'rana'); ?> <i class="fa fa-angle-double-right"></i></a>
                </div>
             </div>
          </div>

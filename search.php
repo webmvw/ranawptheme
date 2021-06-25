@@ -38,7 +38,7 @@
 			                        <li><a href="#"><?php echo get_the_author(); ?></a></li>
 			                     </ul>
 			                  </div>
-			                  <a href="<?php the_permalink(); ?>" class="box-btn">read more <i class="fa fa-angle-double-right"></i></a>
+			                  <a href="<?php the_permalink(); ?>" class="box-btn"><?php esc_html_e('read more', 'rana'); ?> <i class="fa fa-angle-double-right"></i></a>
 			               </div>
 			            </div>
 			         </div>

@@ -33,7 +33,7 @@ get_header();
          <div class="col-lg-4 col-md-6">
             <!-- Single Service -->
             <div class="single-service">
-               <i class="<?php echo $service_icon; ?>"></i>
+               <i class="<?php echo esc_attr($service_icon); ?>"></i>
                <h4><?php the_title(); ?></h4>
                <p><?php the_content(); ?></p>
             </div>

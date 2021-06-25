@@ -30,8 +30,8 @@ get_header();
               ?>
               <div class="col-md-4">
                   <div class="contact-address">
-                     <i class="<?php echo $contact['contact_icon']; ?>"></i>
-                     <h4><?php echo $contact['contact_title']; ?> <span><?php echo $contact['contact_description']; ?></span></h4>
+                     <i class="<?php echo esc_attr($contact['contact_icon']); ?>"></i>
+                     <h4><?php echo esc_html($contact['contact_title']); ?> <span><?php echo esc_html($contact['contact_description']); ?></span></h4>
                   </div>
                </div>
               <?php

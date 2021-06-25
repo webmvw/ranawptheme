@@ -6,7 +6,7 @@
       <?php
       $favicon = $config['favicon'];
       if($favicon['url'] != null){ ?> 
-      <link rel="icon" href="<?php echo $favicon['url']; ?>" type="image/jpg">
+      <link rel="icon" href="<?php echo esc_url($favicon['url']); ?>" type="image/jpg">
       <?php } ?>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,10 +22,10 @@
 						<div class="header-left">
                      
                      <?php if($config['header_email']){?>
-                     <a href="mailto:<?php echo $config['header_email']; ?>"><i class="fa fa-envelope"></i> <?php echo $config['header_email']; ?></a>
+                     <a href="mailto:<?php echo esc_url($config['header_email']); ?>"><i class="fa fa-envelope"></i> <?php echo esc_html($config['header_email']); ?></a>
                      <?php }?>
 							<?php if($config['header_phone']){?>
-							<a href="tel:<?php echo $config['header_phone']; ?>"><i class="fa fa-phone"></i> <?php echo $config['header_phone']; ?></a>
+							<a href="tel:<?php echo esc_url($config['header_phone']); ?>"><i class="fa fa-phone"></i> <?php echo esc_html($config['header_phone']); ?></a>
                      <?php } ?>
 						</div>
 					</div>
@@ -36,7 +36,7 @@
                   ?>
 						<div class="header-social">
                      <?php foreach ($header_icons as $header_icon) { ?>
-                        <a href="<?php echo $header_icon['social_link']; ?>" title="<?php echo $header_icon['social_title']; ?>"><i class="<?php echo $header_icon['social_icon']; ?>"></i></a>
+                        <a href="<?php echo esc_url($header_icon['social_link']); ?>" title="<?php echo esc_attr($header_icon['social_title']); ?>"><i class="<?php echo esc_attr($header_icon['social_icon']); ?>"></i></a>
                      <?php } ?>
 						</div>
                   <?php } ?>
@@ -53,9 +53,9 @@
                      <?php
                      $logo = $config['logo'];
                      if($logo['url'] != null){ ?>   
-                     <a class="navbar-brand" href="<?php echo site_url(); ?>"><img src="<?php echo $logo['url']; ?>"></a>
+                     <a class="navbar-brand" href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo esc_url($logo['url']); ?>"></a>
                      <?php }else{ ?>
-                     <a class="navbar-brand" href="<?php echo site_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
+                     <a class="navbar-brand" href="<?php echo esc_url(site_url()); ?>"><?php echo get_bloginfo('name'); ?></a>
                      <?php }?>
 
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

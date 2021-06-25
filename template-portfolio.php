@@ -23,12 +23,12 @@ get_header();
       <div class="row">
          <div class="col-xl-12">
             <div class="portfolio-menu mb-40 text-center">
-               <button class="active" data-filter="*">ALL</button>
+               <button class="active" data-filter="*"><?php esc_html_e('ALL', 'rana'); ?></button>
                <?php
                $portfolio_menus = get_terms('portfolio_cat');
                foreach($portfolio_menus as $portfolio_menu){
                ?>
-               <button data-filter=".<?php echo $portfolio_menu->slug; ?>" class=""><?php echo $portfolio_menu->name; ?></button>
+               <button data-filter=".<?php echo esc_attr($portfolio_menu->slug); ?>" class=""><?php echo esc_html($portfolio_menu->name); ?></button>
                <?php   
                }
                ?>
