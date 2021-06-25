@@ -1,6 +1,9 @@
 <?php
 
 get_template_part('/template-parts/rana-options');
+get_template_part('/inc/rana-activation');
+
+
 
 
 function rana_theme_setup(){
