@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <?php $config = get_option('rana_options');?>
       <meta charset="utf-8">
+      <?php
+      $favicon = $config['favicon'];
+      if($favicon['url'] != null){ ?> 
+      <link rel="icon" href="<?php echo $favicon['url']; ?>" type="image/jpg">
+      <?php } ?>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +20,7 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
 						<div class="header-left">
-                     <?php $config = get_option('rana_options');?>
+                     
                      <?php if($config['header_email']){?>
                      <a href="mailto:<?php echo $config['header_email']; ?>"><i class="fa fa-envelope"></i> <?php echo $config['header_email']; ?></a>
                      <?php }?>

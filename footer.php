@@ -17,16 +17,22 @@
          </div>
       </div>
       <div class="row copyright">
+         <?php $config = get_option('rana_options');?>
          <div class="col-md-6">
-            <p>&copy; All Rights Reserved 2020</p>
+            <p>&copy; <?php echo $config['footer_text']; ?></p>
          </div>
          <div class="col-md-6 text-right">
             <ul>
-               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+               <?php
+               $footer_social_links = $config['footer_social'];
+               if($footer_social_links){
+                  foreach ($footer_social_links as $footer_social_link) {
+               ?>
+               <li><a href="<?php echo $footer_social_link['footer_social_link']; ?>" title="<?php echo $footer_social_link['footer_social_title']; ?>" target="<?php echo $config['footer_link_target']; ?>"><i class="<?php echo $footer_social_link['footer_social_icon']; ?>"></i></a></li>
+               <?php       
+                  }
+               }
+               ?>
             </ul>
          </div>
       </div>

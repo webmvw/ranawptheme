@@ -62,40 +62,36 @@ get_header();
          <div class="container">
             <div class="row section-title">
                <div class="col-md-6 text-right">
-                  <h3><span>who we are?</span> about us</h3>
+                  <?php $config = get_option('rana_options');?>
+                  <h3><span><?php echo $config['about_sec_subtitle']; ?></span> <?php echo $config['about_sec_title']; ?></h3>
                </div>
                <div class="col-md-6">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.d </p>
+                  <p><?php echo $config['about_sec_description']; ?></p>
                </div>
             </div>
             <div class="row">
                <div class="col-md-7">
                   <div class="about">
                      <div class="page-title">
-                        <h4>welcome to halim</h4>
+                        <h4><?php echo $config['about_page_title']; ?></h4>
                      </div>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio maxime laborum delectus aliquam ipsum itaque voluptatem non reiciendis aliquid totam facere, tempora iure iusto adipisci doloremque in, amet, alias nostrum. Explicabo reprehenderit.</p>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                     <a href="#" class="box-btn">read more <i class="fa fa-angle-double-right"></i></a>
+                     <p><?php echo $config['about_page_description']; ?></p>
+                     <a href="<?php echo $config['about_page_btn']; ?>" class="box-btn">read more <i class="fa fa-angle-double-right"></i></a>
                   </div>
                </div>
                <div class="col-md-5">
+
+                  <?php
+                  $about_page_features = $config['about_page_features'];
+                  if($about_page_features){
+                  foreach ($about_page_features as $about_page_feature) {
+                  ?>
                   <div class="single_about">
-                     <i class="fa fa-laptop"></i>
-                     <h4>our mission</h4>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
+                     <i class="<?php echo $about_page_feature['features_icon']; ?>"></i>
+                     <h4><?php echo $about_page_feature['features_title']; ?></h4>
+                     <p><?php echo $about_page_feature['features_description']; ?></p>
                   </div>
-                  <div class="single_about">
-                     <i class="fa fa-user"></i>
-                     <h4>our vission</h4>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                  </div>
-                  <div class="single_about">
-                     <i class="fa fa-pencil"></i>
-                     <h4>our history</h4>
-                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry </p>
-                  </div>
+                  <?php } } ?>
                </div>
             </div>
          </div>
@@ -112,48 +108,23 @@ get_header();
                         <h4>faq</h4>
                      </div>
                      <div class="accordion" id="accordionExample">
+                        <?php
+                        $faq_lists = $config['about_faq_list'];
+                        if($faq_lists){
+                        $i = 1;
+                        foreach ($faq_lists as $faq_list) {
+                        ?>
                         <div class="card">
-                           <div class="card-header" id="headingOne">
+                           <div class="card-header" id="heading<?php echo $i; ?>">
                               <h5 class="mb-0">
-                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                 Lorem Ipsum is simply 
-                                 </button>
+                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $i; ?>" aria-expanded="true" aria-controls="collapse<?php echo $i; ?>"><?php echo $faq_list['faq_title']; ?></button>
                               </h5>
                            </div>
-                           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                              <div class="card-body">
-                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                              </div>
+                           <div id="collapse<?php echo $i; ?>" class="collapse <?php if($i == 1){echo "show";} ?>" aria-labelledby="heading<?php echo $i; ?>" data-parent="#accordionExample">
+                              <div class="card-body"><?php echo $faq_list['faq_description']; ?></div>
                            </div>
                         </div>
-                        <div class="card">
-                           <div class="card-header" id="headingTwo">
-                              <h5 class="mb-0">
-                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                 Lorem Ipsum is simply
-                                 </button>
-                              </h5>
-                           </div>
-                           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                              <div class="card-body">
-                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                              </div>
-                           </div>
-                        </div>
-                        <div class="card">
-                           <div class="card-header" id="headingThree">
-                              <h5 class="mb-0">
-                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                 Lorem Ipsum is simply
-                                 </button>
-                              </h5>
-                           </div>
-                           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                              <div class="card-body">
-                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                              </div>
-                           </div>
-                        </div>
+                        <?php $i++; } } ?>
                      </div>
                   </div>
                </div>
@@ -162,22 +133,16 @@ get_header();
                      <div class="page-title">
                         <h4>our skills</h4>
                      </div>
+                     <?php
+                     $skills = $config['skill_lists'];
+                     if($skills){
+                     foreach ($skills as $skill) {
+                     ?>
                      <div class="single-skill">
-                        <h4>html</h4>
-                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        <h4><?php echo $skill['progress_title']; ?></h4>
+                        <div class="progress-bar" role="progressbar" style="width: <?php echo $skill['progress_value']; ?>%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><?php echo $skill['progress_value']; ?>%</div>
                      </div>
-                     <div class="single-skill">
-                        <h4>css</h4>
-                        <div class="progress-bar" role="progressbar" style="width: 74%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">74%</div>
-                     </div>
-                     <div class="single-skill">
-                        <h4>photoshop</h4>
-                        <div class="progress-bar" role="progressbar" style="width: 94%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">94%</div>
-                     </div>
-                     <div class="single-skill">
-                        <h4>wordpress</h4>
-                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-                     </div>
+                     <?php } } ?>
                   </div>
                </div>
             </div>
@@ -191,10 +156,10 @@ get_header();
          <div class="container">
             <div class="row section-title">
                <div class="col-md-6 text-right">
-                  <h3><span>who we are?</span> our services</h3>
+                  <h3><span><?php echo $config['about_sec_subtitle']; ?></span> <?php echo $config['service_sec_title']; ?></h3>
                </div>
                <div class="col-md-6">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.d </p>
+                  <p><?php echo $config['service_sec_description']; ?></p>
                </div>
             </div>
             <div class="row">
@@ -226,32 +191,26 @@ get_header();
       <!-- Services Area End -->
       
       <!-- Counter Area End -->
+      <?php
+      $counters = $config['counter'];
+      if($counters){
+      ?>
       <section class="counter-area">
          <div class="container-fluid">
             <div class="row">
+               <?php
+               foreach ($counters as $counter) {
+               ?>   
                <div class="col-md-3">
                   <div class="single-counter">
-                     <h4><i class="fa fa-user"></i><span class="counter">567</span>customers</span></h4>
+                     <h4><i class="<?php echo $counter['counter_icon']; ?>"></i><span class="counter"><?php echo $counter['counter_title']; ?></span><?php echo $counter['counter_description']; ?></span></h4>
                   </div>
                </div>
-               <div class="col-md-3">
-                  <div class="single-counter">
-                     <h4><i class="fa fa-code"></i><span class="counter">236</span>line of codes</h4>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="single-counter">
-                     <h4><i class="fa fa-file"></i><span class="counter">789</span>users</h4>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="single-counter">
-                     <h4><i class="fa fa-coffee"></i><span class="counter">1,395</span>cup of coffees</h4>
-                  </div>
-               </div>
+               <?php }?>
             </div>
          </div>
       </section>
+      <?php } ?>
       <!-- Counter Area End -->
 
       <!-- Team Area Start -->
@@ -259,10 +218,10 @@ get_header();
          <div class="container">
             <div class="row section-title">
                <div class="col-md-6 text-right">
-                  <h3><span>who we are?</span> creative team</h3>
+                  <h3><span><?php echo $config['team_sec_subtitle']; ?></span> <?php echo $config['team_sec_title']; ?></h3>
                </div>
                <div class="col-md-6">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.d </p>
+                  <p><?php echo $config['team_sec_description']; ?></p>
                </div>
             </div>
             <div class="row">
@@ -290,19 +249,19 @@ get_header();
                            <h4><?php the_title(); ?> <span><?php the_content(); ?></span></h4>
                            <ul>
                               <?php if($facebook_link){ ?>
-                                 <li><a href="<?php echo $facebook_link; ?>"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="<?php echo $facebook_link; ?>"><i class="fab fa-facebook"></i></a></li>
                               <?php }?>
 
                               <?php if($twitter_link){ ?>
-                                 <li><a href="<?php echo $twitter_link; ?>"><i class="fa fa-twitter"></i></a></li>
+                                 <li><a href="<?php echo $twitter_link; ?>"><i class="fab fa-twitter"></i></a></li>
                               <?php }?>
 
                               <?php if($linkedin_link){ ?>
-                                 <li><a href="<?php echo $linkedin_link; ?>"><i class="fa fa-linkedin"></i></a></li>
+                                 <li><a href="<?php echo $linkedin_link; ?>"><i class="fab fa-linkedin"></i></a></li>
                               <?php }?>
 
                               <?php if($google_link){ ?>
-                                 <li><a href="<?php echo $google_link; ?>"><i class="fa fa-google-plus"></i></a></li>
+                                 <li><a href="<?php echo $google_link; ?>"><i class="fab fa-google-plus"></i></a></li>
                               <?php }?>
                            </ul>
                         </div>
@@ -323,10 +282,10 @@ get_header();
          <div class="container">
             <div class="row section-title white-section">
                <div class="col-md-6 text-right">
-                  <h3><span>who we are?</span> what client say</h3>
+                  <h3><span><?php echo $config['testimonial_sec_subtitle']; ?></span> <?php echo $config['testimonial_sec_title']; ?></h3>
                </div>
                <div class="col-md-6">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.d </p>
+                  <p><?php echo $config['testimonial_sec_description']; ?></p>
                </div>
             </div>
          </div>
@@ -372,10 +331,10 @@ get_header();
          <div class="container">
             <div class="row section-title">
                <div class="col-md-6 text-right">
-                  <h3><span>who we are?</span> latest news</h3>
+                  <h3><span><?php echo $config['blog_sec_subtitle']; ?></span> <?php echo $config['blog_sec_title']; ?></h3>
                </div>
                <div class="col-md-6">
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry typesetting industry.d </p>
+                  <p><?php echo $config['blog_sec_description']; ?></p>
                </div>
             </div>
             <div class="row">
@@ -414,20 +373,28 @@ get_header();
          </div>
       </section>
       <!-- Latest News Area End -->
-      
+ 
+
+<?php
+   $cta_switch = $config['cta_switch'];
+   if($cta_switch == true){
+?>
  <!-- CTA Area Start -->
  <section class="cta">
    <div class="container">
       <div class="row">
          <div class="col-md-6">
-            <h4>best solution for your business <span>the can be used on larger scale projectss as well as small scale projectss</span></h4>
+            <h4><?php echo $config['cta_title']; ?> <span><?php echo $config['cta_description']; ?></span></h4>
          </div>
          <div class="col-md-6 text-center">
-            <a href="#" class="box-btn">contact us <i class="fa fa-angle-double-right"></i></a>
+            <a href="<?php echo $config['cta_btn_link']; ?>" class="box-btn"><?php echo $config['cta_btn_txt']; ?> <i class="fa fa-angle-double-right"></i></a>
          </div>
       </div>
    </div>
 </section>
 <!-- CTA Area End -->
+<?php } ?>
+
+
 
 <?php get_footer(); ?>
