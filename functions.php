@@ -12,6 +12,128 @@ function rana_theme_setup(){
 	add_theme_support('post-thumbnails', array('post', 'sliders', 'teams', 'testimonials', 'portfolio'));
 	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
 
+	/**
+	 * Add post-formats support.
+	 */
+	add_theme_support(
+		'post-formats',
+		array(
+			'link',
+			'aside',
+			'gallery',
+			'image',
+			'quote',
+			'status',
+			'video',
+			'audio',
+			'chat',
+		)
+	);
+
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support(
+		'html5',
+		array(
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'style',
+			'script',
+			'navigation-widgets',
+		)
+	);
+	// Add support for Block Styles.
+	add_theme_support( 'wp-block-styles' );
+
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+
+	// Custom background color.
+	add_theme_support(
+		'custom-background',
+		array(
+			'default-color' => 'd1e4dd',
+		)
+	);
+
+
+	// Editor color palette.
+	$black     = '#000000';
+	$dark_gray = '#28303D';
+	$gray      = '#39414D';
+	$green     = '#D1E4DD';
+	$blue      = '#D1DFE4';
+	$purple    = '#D1D1E4';
+	$red       = '#E4D1D1';
+	$orange    = '#E4DAD1';
+	$yellow    = '#EEEADD';
+	$white     = '#FFFFFF';
+
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => esc_html__( 'Black', 'rana' ),
+				'slug'  => 'black',
+				'color' => $black,
+			),
+			array(
+				'name'  => esc_html__( 'Dark gray', 'rana' ),
+				'slug'  => 'dark-gray',
+				'color' => $dark_gray,
+			),
+			array(
+				'name'  => esc_html__( 'Gray', 'rana' ),
+				'slug'  => 'gray',
+				'color' => $gray,
+			),
+			array(
+				'name'  => esc_html__( 'Green', 'rana' ),
+				'slug'  => 'green',
+				'color' => $green,
+			),
+			array(
+				'name'  => esc_html__( 'Blue', 'rana' ),
+				'slug'  => 'blue',
+				'color' => $blue,
+			),
+			array(
+				'name'  => esc_html__( 'Purple', 'rana' ),
+				'slug'  => 'purple',
+				'color' => $purple,
+			),
+			array(
+				'name'  => esc_html__( 'Red', 'rana' ),
+				'slug'  => 'red',
+				'color' => $red,
+			),
+			array(
+				'name'  => esc_html__( 'Orange', 'rana' ),
+				'slug'  => 'orange',
+				'color' => $orange,
+			),
+			array(
+				'name'  => esc_html__( 'Yellow', 'rana' ),
+				'slug'  => 'yellow',
+				'color' => $yellow,
+			),
+			array(
+				'name'  => esc_html__( 'White', 'rana' ),
+				'slug'  => 'white',
+				'color' => $white,
+			),
+		)
+	);
+
+
+
 	register_nav_menus(array(
 		'main-menu' => __('Primary Menu', 'rana')
 	));

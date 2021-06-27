@@ -1,9 +1,9 @@
 /*
 
 Theme Name: rana-theme
-Theme URL: https://wordpress.org/themes
+Theme URI: https://wordpress.org/themes
 Author: webmvw
-Author URL: https://profile.webmvwit.com
+Author URI: https://profile.webmvwit.com
 Description: rana multipurpose wordpress responsive theme.
 Tags: Blog, Portfolio, one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 Requires at Least: 5.3
@@ -17,6 +17,10 @@ Text Domain: rana
 */
 
 .screen-reader-text{}
+.wp-caption{}
+.wp-caption-text{}
+.gallery-caption{}
+.bypostauthor{}
 
 
 /* pagination css */

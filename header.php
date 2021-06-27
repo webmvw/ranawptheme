@@ -55,9 +55,9 @@
                      <?php
                      $logo = $config['logo'];
                      if($logo['url'] != null){ ?>   
-                     <a class="navbar-brand" href="<?php echo esc_url(site_url()); ?>"><img src="<?php echo esc_url($logo['url']); ?>"></a>
+                     <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url($logo['url']); ?>"></a>
                      <?php }else{ ?>
-                     <a class="navbar-brand" href="<?php echo esc_url(site_url()); ?>"><?php echo get_bloginfo('name'); ?></a>
+                     <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>"><?php echo get_bloginfo('name'); ?></a>
                      <?php }?>
 
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

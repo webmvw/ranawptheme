@@ -11,7 +11,7 @@
                <div class="breadcumb">
                    <h4><?php esc_html_e('Blog', 'rana'); ?></h4>
                    <ul>
-                       <li><a href="<?php echo esc_url(site_url()); ?>"><?php esc_html_e('Home', 'rana'); ?></a></li> / 
+                       <li><a href="<?php echo esc_url(home_url()); ?>"><?php esc_html_e('Home', 'rana'); ?></a></li> / 
                        <li><?php esc_html_e('Blog', 'rana'); ?></li>
                    </ul>
                </div>
