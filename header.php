@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
    <head>
       <?php $config = get_option('rana_options');?>
       <meta charset="utf-8">
@@ -14,7 +14,9 @@
       <?php wp_head(); ?>
 
    </head>
-   <body>
+   <body <?php body_class(); ?>>
+      <?php wp_body_open(); ?>
+      
 	   <section class="header-top">
 			<div class="container">
 				<div class="row">

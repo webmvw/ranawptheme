@@ -8,6 +8,7 @@ get_template_part('/inc/rana-activation');
 
 function rana_theme_setup(){
 	add_theme_support('title-tag');
+	add_theme_support('automatic-feed-links');
 	add_theme_support('post-thumbnails', array('post', 'sliders', 'teams', 'testimonials', 'portfolio'));
 	load_theme_textdomain('rana', get_template_directory_uri().'/languages');
 
@@ -48,84 +49,6 @@ function rana_theme_css_js_enqueue(){
 	wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', true);
 }
 add_action('wp_enqueue_scripts', 'rana_theme_css_js_enqueue');
-
-
-
-// all custom posts
-function rana_theme_custom_posts(){
-
-	//custom post for slider
-	register_post_type('sliders', array(
-		'labels' => array(
-			'name' => __('Sliders', 'rana'),
-			'singular_name' => __('Slider', 'rana')
-		),
-		'public' => true,
-		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
-	));
-
-	//custom post for services
-	register_post_type('services', array(
-		'labels' => array(
-			'name' => __('Services', 'rana'),
-			'singular_name' => __('Service', 'rana')
-		),
-		'public' => true,
-		'supports' => array('title', 'editor', 'custom-fields')
-	));
-
-
-	// custom post for teams
-	register_post_type('teams', array(
-		'labels' => array(
-			'name' => __('Teams', 'rana'),
-			'singular_name' => __('Team', 'rana')
-		),
-		'public' => true,
-		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'page-attributes')
-	));
-
-	// custom post for teams
-	register_post_type('testimonials', array(
-		'labels' => array(
-			'name' => __('Testimonials', 'rana'),
-			'singular_name' => __('Testimonial', 'rana')
-		),
-		'public' => true,
-		'supports' => array('thumbnail', 'custom-fields', 'page-attributes')
-	));
-
-	// custom post for gallery
-	register_post_type('gallery', array(
-		'labels' => array(
-			'name' => __('Gallerys', 'rana'),
-			'singular_name' => __('Gallery', 'rana')
-		),
-		'public' => true,
-		'supports' => array('title', 'custom-fields', 'page-attributes')
-	));
-
-	// custom post for portfolio
-	register_post_type('portfolio', array(
-		'labels' => array(
-			'name' => __('Portfolios', 'rana'),
-			'singular_name' => __('Portfolio', 'rana')
-		),
-		'public' => true,
-		'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
-	));
-
-	// custom taxonomy for portfolio
-	register_taxonomy('portfolio_cat', 'portfolio', array(
-		'labels' => array(
-			'name' => __('Categories', 'rana'),
-			'singular_name' => __('Category', 'rana')
-		),
-		'hierarchical' => true,
-		'show_admin_column' => true
-	));
-}
-add_action('init', 'rana_theme_custom_posts');
 
 
 

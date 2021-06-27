@@ -37,12 +37,14 @@ if(class_exists('CSF')){
 	      array(
 	        'id'    => 'header_email',
 	        'type'  => 'text',
-	        'title' => __('Email Address', 'rana')
+	        'title' => __('Email Address', 'rana'),
+	        'default' => 'info@gmail.com'
 	      ),
 	      array(
 	        'id'    => 'header_phone',
 	        'type'  => 'text',
-	        'title' => __('Phone Number', 'rana')
+	        'title' => __('Phone Number', 'rana'),
+	        'default' => '512-490-450'
 	      )
 	    )
 	));

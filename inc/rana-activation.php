@@ -23,6 +23,13 @@ function my_theme_register_required_plugins() {
 			'slug' => 'contact-form-7',
 			'required' => true
 		),
+		array(
+			'name' => 'rana-theme custom post',
+			'slug' => 'rana-theme-custom-post',
+			'source' => 'https://www.dropbox.com/s/kyb9hewvo2663b0/rana-cpt.zip?dl=1',
+			'required' => true,
+			'force_activation'   => true
+		),
 	);
 
 	$config = array(

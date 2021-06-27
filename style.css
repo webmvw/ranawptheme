@@ -1,12 +1,22 @@
 /*
 
-theme: rana-theme;
-author: webmvw;
-version: 1.0;
-description: rana multipurpose wordpress responsive theme.
-tags: Business, Corporate, Responsive, Blog, Portfolio, one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns;
+Theme Name: rana-theme
+Theme URL: https://wordpress.org/themes
+Author: webmvw
+Author URL: https://profile.webmvwit.com
+Description: rana multipurpose wordpress responsive theme.
+Tags: Blog, Portfolio, one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
+Requires at Least: 5.3
+Tested up to: 5.6
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.o.html
+Text Domain: rana
 
 */
+
+.screen-reader-text{}
 
 
 /* pagination css */

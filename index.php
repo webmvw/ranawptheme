@@ -28,7 +28,7 @@
          while(have_posts()){
             the_post();
          ?>
-         <div class="col-md-4">
+         <div class="col-md-4" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <div class="single-blog">
                <?php the_post_thumbnail(); ?>
                <div class="post-content">

@@ -2,5 +2,10 @@
 <?php the_post_thumbnail(); ?>
 <p><?php the_content(); ?></p>
 <div class="comments">
-    <?php comment_form(); ?>
+    <?php
+	if ( comments_open() || get_comments_number() ) {
+		comments_template();
+	}
+	?>
 </div>
+
