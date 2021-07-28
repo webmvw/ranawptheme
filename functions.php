@@ -233,7 +233,7 @@ function rana_theme_widgets(){
 }
 add_action('widgets_init', 'rana_theme_widgets');
 
-
+require_once get_template_directory().'/inc/rana-demo-content.php';
 
 
 ?>
